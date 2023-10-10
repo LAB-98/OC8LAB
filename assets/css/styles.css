@@ -1,14 +1,15 @@
+@charset "UTF-8";
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify:wght@400;500;600&family=Pixelify:wght@400;500&display=swap");
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(207, 65%, 65%);
-  --title-color: hsl(207, 4%, 16%);
-  --text-color: hsl(207, 4%, 28%);
-  --text-color-light: hsl(207, 4%, 56%);
+  --title-color: rgb(120, 108, 224);
+  --text-color: rgb(120, 108, 224);
+  --text-color-light: rgb(120, 108, 224);
   --body-color: hsl(207, 4%, 99%);
   --container-color: hsl(207, 4%, 95%);
   /* Change the first number */
@@ -104,11 +105,22 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --title-color: hsl(128, 53%, 71%);
+  --title-color: hsl(120, 48%, 62%);
   --text-color: hsl(120, 48%, 62%);
-  --body-color: hsl(207, 4%, 10%);
+  --body-color: hsl(0, 0%, 0%);
   --container-color: hsl(207, 4%, 12%);
   --gradient-color: linear-gradient(180deg, hsla(115, 48%, 52%, 0.8), rgb(68, 184, 76));
+}
+
+body.dark-theme a {
+  color: var(--text-color);
+  text-decoration: none; /* Si vous souhaitez supprimer le soulignement par défaut des liens */
+}
+
+/* Et pour changer la couleur au survol si vous le souhaitez */
+body.dark-theme a:hover {
+  color: var(--title-color);
+  text-decoration: underline; /* Si vous souhaitez ajouter un soulignement au survol */
 }
 
 /*========== 

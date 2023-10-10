@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify:wght@400;500;600&family=Pixelify:wght@400;500&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root{
@@ -8,9 +8,9 @@
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --first-color: hsl(207, 65%, 65%);
-    --title-color: hsl(207, 4%, 16%);
-    --text-color: hsl(207, 4%, 28%);
-    --text-color-light: hsl(207, 4%, 56%);
+    --title-color: rgb(120, 108, 224);
+    --text-color: rgb(120, 108, 224);
+    --text-color-light: rgb(120, 108, 224);
     --body-color: hsl(207, 4%, 99%);
     --container-color: hsl(207, 4%, 95%);
 

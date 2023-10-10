@@ -14,11 +14,22 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-    --title-color: hsl(128, 53%, 71%);
+    --title-color: hsl(120, 48%, 62%);
     --text-color: hsl(120, 48%, 62%);
-    --body-color: hsl(207, 4%, 10%);
+    --body-color: hsl(0, 0%, 0%);
     --container-color: hsl(207, 4%, 12%);
     --gradient-color: linear-gradient(180deg, hsla(115, 48%, 52%, 0.8), rgb(68, 184, 76));
+}
+
+body.dark-theme a {
+    color: var(--text-color);
+    text-decoration: none; /* Si vous souhaitez supprimer le soulignement par défaut des liens */
+}
+
+/* Et pour changer la couleur au survol si vous le souhaitez */
+body.dark-theme a:hover {
+    color: var(--title-color);
+    text-decoration: underline; /* Si vous souhaitez ajouter un soulignement au survol */
 }
 
 /*========== 

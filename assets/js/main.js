@@ -65,30 +65,33 @@ const contactForm = document.getElementById('contact-form'),
       contactEmail = document.getElementById('contact-email'),
       contactProject = document.getElementById('contact-project'),
       contactMessage = document.getElementById('contact-message');
-      
-const sendEmail = (e) =>{
-  e.preventDefault();
 
-  if(contactName.value === '' || contactEmail.value === '' || contactProject.value === ''){
-    contactMessage.classList.remove('color-blue');
-    contactMessage.classList.add('color-red');
-    contactMessage.textContent = 'Write all the input fields 📩';
-  }else{
-    emailjs.sendForm('','','#contact-form','')
-      .then(() =>{
-        contactMessage.classList.add('color-blue');
-        contactMessage.textContent = 'Message sent ✅';
-        setTimeout(() => {
-          contactMessage.textContent = '';
-        }, 5000);
-      }, (error) =>{
-        alert('OOPS! SOMETHING HAS FAILED...', error);
-      });
+// EmailJS Init
+emailjs.init('qv_e5vmPYX2hEJMnr');
 
-    contactName.value = '';
-    contactEmail.value = '';
-    contactProject.value = '';
-  }
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (contactName.value === '' || contactEmail.value === '' || contactProject.value === '') {
+        contactMessage.classList.remove('color-blue');
+        contactMessage.classList.add('color-red');
+        contactMessage.textContent = 'Write all the input fields 📩';
+    } else {
+        emailjs.sendForm('default_service', 'template_v7mn56e', '#contact-form')
+            .then(() => {
+                contactMessage.classList.add('color-blue');
+                contactMessage.textContent = 'Message sent ✅';
+                setTimeout(() => {
+                    contactMessage.textContent = '';
+                }, 5000);
+            }, (error) => {
+                alert('OOPS! SOMETHING HAS FAILED...', error);
+            });
+
+        contactName.value = '';
+        contactEmail.value = '';
+        contactProject.value = '';
+    }
 };
 contactForm.addEventListener('submit', sendEmail);
 
