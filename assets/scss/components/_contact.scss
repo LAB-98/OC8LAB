@@ -36,6 +36,9 @@
             font-size: var(--small-font-size);
             font-family: var(--title-font);
             color: var(--title-color);
+            a{
+                color: var(--title-color); 
+            }
         }
     }
     &__button{

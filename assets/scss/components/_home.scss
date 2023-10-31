@@ -88,6 +88,9 @@
         }
         &-description{
             padding-right: 4rem;
+            a{
+                color: var(--title-color); 
+            }
         }
         &-number{
             font-size: var(--h1-font-size);
